@@ -19,29 +19,20 @@ class Education {
   static List<Education> sampleEducation = [
     Education(
       degree: 'Bachelor of Science in Computer Science',
-      institution: 'University of Technology',
-      duration: '2016 - 2020',
-      description: 'Specialized in Mobile Application Development and Software Engineering',
+      institution: 'Government Collage University Lahore, GCU',
+      duration: '2021-2025',
+      description: 'Specialized in Computer Science and Software Engineering',
       logoUrl: 'assets/images/university1.png',
       achievements: [
-        'Graduated with First Class Honours',
-        'Dean\'s List for Academic Excellence',
-        'Best Final Year Project Award',
+        'Graduated with Good CGPA',
+        'Developed FYP',
       ],
     ),
     Education(
-      degree: 'Flutter Development Certification',
-      institution: 'Google Developers',
-      duration: '2020',
-      description: 'Advanced Flutter Development Course',
+      degree: 'Intermediate Pre Engineering ',
+      institution: 'Pgc - Punjab Group Of Collages',
+      duration: '2019-2021',
       logoUrl: 'assets/images/google.png',
-    ),
-    Education(
-      degree: 'Mobile App Development Bootcamp',
-      institution: 'Tech Academy',
-      duration: '2019',
-      description: 'Intensive 3-month bootcamp focusing on mobile app development',
-      logoUrl: 'assets/images/academy.png',
     ),
   ];
 }
@@ -64,6 +55,24 @@ class Skill {
     // Programming Languages
     Skill(
       name: 'Dart',
+      proficiency: 0.95,
+      category: 'Programming Languages',
+      iconPath: 'assets/icons/dart.svg',
+    ),
+    Skill(
+      name: 'C++/C/C#',
+      proficiency: 0.95,
+      category: 'Programming Languages',
+      iconPath: 'assets/icons/dart.svg',
+    ),
+    Skill(
+      name: 'Java',
+      proficiency: 0.95,
+      category: 'Programming Languages',
+      iconPath: 'assets/icons/dart.svg',
+    ),
+    Skill(
+      name: 'Sql',
       proficiency: 0.95,
       category: 'Programming Languages',
       iconPath: 'assets/icons/dart.svg',
@@ -100,10 +109,28 @@ class Skill {
       category: 'Frameworks',
       iconPath: 'assets/icons/firebase.svg',
     ),
+    Skill(
+      name: 'MySql/Sqlite',
+      proficiency: 0.90,
+      category: 'Frameworks',
+      iconPath: 'assets/icons/firebase.svg',
+    ),
     
     // Tools
     Skill(
       name: 'Git',
+      proficiency: 0.85,
+      category: 'Tools',
+      iconPath: 'assets/icons/git.svg',
+    ),
+    Skill(
+      name: 'GitHub',
+      proficiency: 0.85,
+      category: 'Tools',
+      iconPath: 'assets/icons/git.svg',
+    ),
+    Skill(
+      name: 'Cursor AI',
       proficiency: 0.85,
       category: 'Tools',
       iconPath: 'assets/icons/git.svg',
@@ -115,7 +142,7 @@ class Skill {
       iconPath: 'assets/icons/vscode.svg',
     ),
     Skill(
-      name: 'Figma',
+      name: 'Android Studio',
       proficiency: 0.80,
       category: 'Tools',
       iconPath: 'assets/icons/figma.svg',

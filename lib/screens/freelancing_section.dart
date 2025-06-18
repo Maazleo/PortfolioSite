@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../constants/app_constants.dart';
 import '../models/experience_model.dart';
 import '../utils/responsive.dart';
@@ -8,6 +9,16 @@ import '../widgets/animated_button.dart';
 
 class FreelancingSection extends StatelessWidget {
   const FreelancingSection({Key? key}) : super(key: key);
+  
+  Future<void> _navigateToFiverr() async {
+    const String fiverrUrl = SocialLinks.fiverr;
+    
+    if (await canLaunchUrl(Uri.parse(fiverrUrl))) {
+      await launchUrl(Uri.parse(fiverrUrl), mode: LaunchMode.externalApplication);
+    } else {
+      throw 'Could not launch $fiverrUrl';
+    }
+  }
   
   @override
   Widget build(BuildContext context) {
@@ -58,7 +69,7 @@ class FreelancingSection extends StatelessWidget {
         Center(
           child: AnimatedButton(
             text: 'Hire Me on Fiverr',
-            onPressed: () {},
+            onPressed: _navigateToFiverr,
             icon: Icons.shopping_bag,
           ),
         ),

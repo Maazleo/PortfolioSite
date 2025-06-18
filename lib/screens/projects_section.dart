@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../constants/app_constants.dart';
 import '../models/project_model.dart';
 import '../utils/responsive.dart';
@@ -8,6 +9,16 @@ import '../widgets/project_card.dart';
 
 class ProjectsSection extends StatelessWidget {
   const ProjectsSection({Key? key}) : super(key: key);
+  
+  Future<void> _navigateToGitHub() async {
+    const String githubUrl = SocialLinks.github;
+    
+    if (await canLaunchUrl(Uri.parse(githubUrl))) {
+      await launchUrl(Uri.parse(githubUrl), mode: LaunchMode.externalApplication);
+    } else {
+      throw 'Could not launch $githubUrl';
+    }
+  }
   
   @override
   Widget build(BuildContext context) {
@@ -28,7 +39,7 @@ class ProjectsSection extends StatelessWidget {
           Center(
             child: AnimatedButton(
               text: 'View All Projects',
-              onPressed: () {},
+              onPressed: _navigateToGitHub,
               icon: Icons.apps,
             ),
           ),

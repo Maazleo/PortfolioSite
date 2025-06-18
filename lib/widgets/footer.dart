@@ -134,9 +134,9 @@ class Footer extends StatelessWidget {
             ),
             const SizedBox(width: 16),
             SocialIcon(
-              icon: FontAwesomeIcons.twitter,
-              url: SocialLinks.twitter,
-              tooltip: 'Twitter',
+              icon: FontAwesomeIcons.upwork,
+              url: SocialLinks.fiverr,
+              tooltip: 'Fiverr',
               size: 18,
             ),
           ],
@@ -176,9 +176,9 @@ class Footer extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 16),
-        _buildContactItem(Icons.email, 'your.email@example.com'),
-        _buildContactItem(Icons.phone, '+92 123 4567890'),
-        _buildContactItem(Icons.location_on, 'Karachi, Pakistan'),
+        _buildContactItem(Icons.email, 'maazmasroorhuss@gmail.com'),
+        _buildContactItem(Icons.phone, '+92 305 5248609'),
+        _buildContactItem(Icons.location_on, 'Lahore, Punjab, Pakistan'),
       ],
     );
   }
@@ -238,7 +238,7 @@ class Footer extends StatelessWidget {
         ),
         if (!Responsive.isMobile(context))
           Text(
-            'Designed & Developed with Flutter',
+            'Designed & Developed with Flutter web',
             style: AppTextStyles.bodyStyle.copyWith(
               color: AppColors.textSecondary,
               fontSize: 14,

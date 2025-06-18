@@ -88,22 +88,22 @@ class SectionTitles {
 
 // Social Media Links
 class SocialLinks {
-  static const String github = "https://github.com/yourusername";
-  static const String linkedin = "https://linkedin.com/in/yourusername";
+  static const String github = "https://github.com/Maazleo";
+  static const String linkedin = "https://www.linkedin.com/in/muhammad-maaz-9b134a251?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app";
   static const String twitter = "https://twitter.com/yourusername";
-  static const String fiverr = "https://www.fiverr.com/yourusername";
+  static const String fiverr = "https://www.fiverr.com/s/99Q8Dw0";
   static const String upwork = "https://www.upwork.com/yourusername";
-  static const String email = "mailto:your.email@example.com";
+  static const String email = "maazmasroorhuss@gmail.com";
 }
 
 // Assets Paths
 class AssetPaths {
   static const String profileImage = "assets/images/profile.png";
   static const String logoImage = "assets/images/logo.png";
-  static const String githubIcon = "assets/icons/github.svg";
-  static const String linkedinIcon = "assets/icons/linkedin.svg";
+  static const String githubIcon = "assets/icons/github.png";
+  static const String linkedinIcon = "assets/icons/linkedin.png";
   static const String twitterIcon = "assets/icons/twitter.svg";
-  static const String fiverrIcon = "assets/icons/fiverr.svg";
+  static const String fiverrIcon = "assets/icons/fiverr.png";
   static const String upworkIcon = "assets/icons/upwork.svg";
-  static const String emailIcon = "assets/icons/email.svg";
+  static const String emailIcon = "assets/icons/gmail.png";
 } 

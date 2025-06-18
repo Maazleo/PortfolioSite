@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'dart:ui';
 import '../constants/app_constants.dart';
 import '../utils/responsive.dart';
@@ -22,6 +23,16 @@ class NavBar extends StatefulWidget {
 
 class _NavBarState extends State<NavBar> {
   bool _isMenuOpen = false;
+  
+  Future<void> _downloadCV() async {
+    const String cvUrl = 'https://drive.google.com/file/d/1Pec3E7zaxPcmWnAwLKmV7-m70jWlhdUM/view?usp=drive_link';
+    
+    if (await canLaunchUrl(Uri.parse(cvUrl))) {
+      await launchUrl(Uri.parse(cvUrl), mode: LaunchMode.externalApplication);
+    } else {
+      throw 'Could not launch $cvUrl';
+    }
+  }
   
   final List<String> _navItems = [
     SectionTitles.home,
@@ -106,7 +117,7 @@ class _NavBarState extends State<NavBar> {
             ],
             AnimatedButton(
               text: 'Resume',
-              onPressed: () {},
+              onPressed: _downloadCV,
               isSmall: true,
               icon: Icons.download,
               width: 110,
@@ -173,10 +184,10 @@ class _NavBarState extends State<NavBar> {
               ),
             ],
           ),
-          const SizedBox(height: 16),
+          const SizedBox(height: 14),
           AnimatedButton(
             text: 'Resume',
-            onPressed: () {},
+            onPressed: _downloadCV,
             isSmall: true,
             icon: Icons.download,
           ),

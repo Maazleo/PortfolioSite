@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../constants/app_constants.dart';
 import '../utils/responsive.dart';
 import '../widgets/section_title.dart';
@@ -6,6 +7,18 @@ import '../widgets/animated_button.dart';
 
 class AboutSection extends StatelessWidget {
   const AboutSection({Key? key}) : super(key: key);
+  
+  Future<void> _downloadCV() async {
+    // Replace this URL with your actual CV file URL
+    // You can host your CV on GitHub, Google Drive, or any other file hosting service
+    const String cvUrl = 'https://drive.google.com/file/d/1Pec3E7zaxPcmWnAwLKmV7-m70jWlhdUM/view?usp=drive_link';
+    
+    if (await canLaunchUrl(Uri.parse(cvUrl))) {
+      await launchUrl(Uri.parse(cvUrl), mode: LaunchMode.externalApplication);
+    } else {
+      throw 'Could not launch $cvUrl';
+    }
+  }
   
   @override
   Widget build(BuildContext context) {
@@ -65,17 +78,15 @@ class AboutSection extends StatelessWidget {
         ),
         const SizedBox(height: 24),
         Text(
-          'I am a passionate Flutter Developer with over 3 years of experience in building '
-          'high-quality mobile applications. I specialize in creating cross-platform applications '
+          'I am a passionate Software Developer with over 3 years of experience in building '
+          'high-quality mobile applications with Flutter and React-Native along with Python. I specialize in creating cross-platform applications '
           'that work seamlessly on both Android and iOS platforms.',
           style: AppTextStyles.bodyStyle,
         ),
         const SizedBox(height: 16),
         Text(
-          'My journey in mobile development began when I discovered Flutter in 2019, and I was '
-          'immediately captivated by its capabilities. Since then, I have dedicated myself to '
-          'mastering this framework and have successfully delivered numerous projects for clients '
-          'worldwide.',
+          'My journey in mobile development began when I discovered Flutter in 2023, and I was '
+          'immediately captivated by its capabilities. I have been empowering myself towards learning other Languages, Frameworks and Tools like Python,Sql,Sqa and Django',
           style: AppTextStyles.bodyStyle,
         ),
         const SizedBox(height: 16),
@@ -88,7 +99,7 @@ class AboutSection extends StatelessWidget {
         const SizedBox(height: 24),
         AnimatedButton(
           text: 'Download CV',
-          onPressed: () {},
+          onPressed: _downloadCV,
           icon: Icons.download,
         ),
       ],

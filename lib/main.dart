@@ -195,7 +195,10 @@ class _PortfolioHomePageState extends State<PortfolioHomePage> {
                     children: [
                       // Add padding to prevent content from being hidden under the navbar
                       SizedBox(height: MediaQuery.of(context).padding.top + 60),
-                      _buildSection(0, HomeSection(onExploreClicked: () => _scrollToSection(1))),
+                      _buildSection(0, HomeSection(
+                        onExploreClicked: () => _scrollToSection(1),
+                        onContactClicked: () => _scrollToSection(8),
+                      )),
                       _buildSection(1, const AboutSection()),
                       _buildSection(2, const ExperienceSection()),
                       _buildSection(3, const ProjectsSection()),

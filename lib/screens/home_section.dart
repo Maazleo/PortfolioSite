@@ -8,10 +8,12 @@ import '../widgets/social_icon.dart';
 
 class HomeSection extends StatelessWidget {
   final Function() onExploreClicked;
+  final Function() onContactClicked;
   
   const HomeSection({
     Key? key,
     required this.onExploreClicked,
+    required this.onContactClicked,
   }) : super(key: key);
   
   @override
@@ -152,7 +154,7 @@ class HomeSection extends StatelessWidget {
     return SizedBox(
       width: isMobile ? double.infinity : 500,
       child: Text(
-        'I design and develop mobile applications using Flutter. '
+        'I design and develop Softwares, mobile applications using Flutter and other Stacks. '
         'Specializing in creating beautiful, responsive, and user-friendly applications '
         'that provide exceptional user experiences across all platforms.',
         style: AppTextStyles.bodyStyle,
@@ -172,7 +174,7 @@ class HomeSection extends StatelessWidget {
         ),
         AnimatedButton(
           text: 'Contact Me',
-          onPressed: () {},
+          onPressed: onContactClicked,
           isPrimary: false,
           icon: Icons.email,
         ),
@@ -186,26 +188,26 @@ class HomeSection extends StatelessWidget {
       children: [
         SocialIcon(
           icon: FontAwesomeIcons.github,
-          url: SocialLinks.github,
+          url: "https://github.com/Maazleo",
           tooltip: 'GitHub',
         ),
-        const SizedBox(width: 20),
+        const SizedBox(width: 16),
         SocialIcon(
           icon: FontAwesomeIcons.linkedin,
-          url: SocialLinks.linkedin,
+          url: "https://www.linkedin.com/in/muhammad-maaz-9b134a251",
           tooltip: 'LinkedIn',
         ),
-        const SizedBox(width: 20),
+        const SizedBox(width: 16),
         SocialIcon(
-          icon: FontAwesomeIcons.twitter,
-          url: SocialLinks.twitter,
-          tooltip: 'Twitter',
+          icon: FontAwesomeIcons.facebook,
+          url: "https://www.facebook.com/maazhun",
+          tooltip: 'Facebook',
         ),
-        const SizedBox(width: 20),
+        const SizedBox(width: 16),
         SocialIcon(
-          icon: FontAwesomeIcons.instagram,
-          url: 'https://instagram.com/yourusername',
-          tooltip: 'Instagram',
+          icon: FontAwesomeIcons.upwork,
+          url: 'https://www.fiverr.com/s/99Q8Dw0',
+          tooltip: 'Fiverr',
         ),
       ],
     );
