@@ -23,15 +23,9 @@
 
 ---
 
-## 📸 Screenshots
+## 📸 Check out Portfolio
+[Portfolio](https://maazportfoliosite.netlify.app/)
 
-> _Add your screenshots here!_
-
-| Home | Projects |
-|------|----------|
-| ![Home Screenshot](https://via.placeholder.com/400x220?text=Home+Section) | ![Projects Screenshot](https://via.placeholder.com/400x220?text=Projects+Section) |
-
----
 
 ## 🛠️ Tech Stack
 
