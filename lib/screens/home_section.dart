@@ -123,12 +123,12 @@ class HomeSection extends StatelessWidget {
         child: AnimatedTextKit(
           animatedTexts: [
             TypewriterAnimatedText(
-              'Flutter Developer',
+              'Flutter Mobile APP Developer',
               speed: const Duration(milliseconds: 100),
               cursor: '|',
             ),
             TypewriterAnimatedText(
-              'Mobile App Developer',
+              'React.js Developer',
               speed: const Duration(milliseconds: 100),
               cursor: '|',
             ),
@@ -138,7 +138,7 @@ class HomeSection extends StatelessWidget {
               cursor: '|',
             ),
             TypewriterAnimatedText(
-              'UI/UX Enthusiast',
+              'Mobile and Web App Enthusiast',
               speed: const Duration(milliseconds: 100),
               cursor: '|',
             ),
@@ -154,8 +154,8 @@ class HomeSection extends StatelessWidget {
     return SizedBox(
       width: isMobile ? double.infinity : 500,
       child: Text(
-        'I design and develop Softwares, mobile applications using Flutter and other Stacks. '
-        'Specializing in creating beautiful, responsive, and user-friendly applications '
+        'I design and develop Softwares, Mobile Applications using Flutter and Websites with React.Js. '
+        'Specializing in creating beautiful, responsive, and user-friendly applications and web Apps '
         'that provide exceptional user experiences across all platforms.',
         style: AppTextStyles.bodyStyle,
       ),

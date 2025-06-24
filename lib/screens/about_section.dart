@@ -79,7 +79,7 @@ class AboutSection extends StatelessWidget {
         const SizedBox(height: 24),
         Text(
           'I am a passionate Software Developer with over 3 years of experience in building '
-          'high-quality mobile applications with Flutter and React-Native along with Python. I specialize in creating cross-platform applications '
+          'high-quality mobile applications with Flutter and React-Native and Web Apps with React.js, JavaScript, HTML, Css along with Python. I specialize in creating cross-platform applications '
           'that work seamlessly on both Android and iOS platforms.',
           style: AppTextStyles.bodyStyle,
         ),

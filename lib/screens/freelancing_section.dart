@@ -83,9 +83,9 @@ class FreelancingSection extends StatelessWidget {
       children: [
         Expanded(child: _buildServiceCard('Flutter App Development', Icons.phone_android)),
         const SizedBox(width: 24),
-        Expanded(child: _buildServiceCard('UI/UX Design', Icons.design_services)),
+        Expanded(child: _buildServiceCard('React.js Web Development', Icons.design_services)),
         const SizedBox(width: 24),
-        Expanded(child: _buildServiceCard('App Maintenance', Icons.build)),
+        Expanded(child: _buildServiceCard('App and Web Maintenance', Icons.build)),
       ],
     );
   }
@@ -95,7 +95,7 @@ class FreelancingSection extends StatelessWidget {
       children: [
         _buildServiceCard('Flutter App Development', Icons.phone_android),
         const SizedBox(height: 24),
-        _buildServiceCard('UI/UX Design', Icons.design_services),
+        _buildServiceCard('React.Js Web Development', Icons.design_services),
         const SizedBox(height: 24),
         _buildServiceCard('App Maintenance', Icons.build),
       ],

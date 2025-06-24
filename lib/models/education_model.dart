@@ -60,7 +60,19 @@ class Skill {
       iconPath: 'assets/icons/dart.svg',
     ),
     Skill(
-      name: 'C++/C/C#',
+      name: 'JavaScript, HTML, CSS',
+      proficiency: 0.85,
+      category: 'Programming Languages',
+      iconPath: 'assets/icons/javascript.svg',
+    ),
+    Skill(
+      name: 'Python',
+      proficiency: 0.80,
+      category: 'Programming Languages',
+      iconPath: 'assets/icons/python.svg',
+    ),
+    Skill(
+      name: 'C/C#/C++',
       proficiency: 0.95,
       category: 'Programming Languages',
       iconPath: 'assets/icons/dart.svg',
@@ -77,18 +89,7 @@ class Skill {
       category: 'Programming Languages',
       iconPath: 'assets/icons/dart.svg',
     ),
-    Skill(
-      name: 'JavaScript',
-      proficiency: 0.85,
-      category: 'Programming Languages',
-      iconPath: 'assets/icons/javascript.svg',
-    ),
-    Skill(
-      name: 'Python',
-      proficiency: 0.80,
-      category: 'Programming Languages',
-      iconPath: 'assets/icons/python.svg',
-    ),
+
     
     // Frameworks
     Skill(
@@ -96,6 +97,12 @@ class Skill {
       proficiency: 0.95,
       category: 'Frameworks',
       iconPath: 'assets/icons/flutter.svg',
+    ),
+    Skill(
+      name: 'React.js',
+      proficiency: 0.65,
+      category: 'Frameworks',
+      iconPath: 'assets/icons/react.svg',
     ),
     Skill(
       name: 'React Native',

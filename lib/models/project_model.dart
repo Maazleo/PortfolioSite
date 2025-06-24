@@ -37,7 +37,7 @@ class Project {
       featured: true,
     ),
     Project(
-      title: 'YourJahez App - Anti Jahez Awareness App compaign  ',
+      title: 'YourJahez App - Anti Jahez Awareness App ',
       description: 'A anti jahez compaign awareness app with a surprise.',
       imageUrl: 'assets/images/jahez.png',
       githubUrl: 'https://github.com/Maazleo/Your_Jahez_App',
@@ -45,10 +45,27 @@ class Project {
       technologies: ['Flutter', 'Firebase', 'GetX'],
     ),
     Project(
+      title: 'Hand Cricket Flutter Game - HeadTails ',
+      description: 'A modern, feature-rich hand cricket game built with Flutter. Play against the computer, customize your team, track your stats, and relive the classic hand cricket experience on your device!',
+      imageUrl: 'assets/images/jahez.png',
+      githubUrl: 'https://github.com/Maazleo/HandCricket-FlutterGame',
+      liveUrl: 'https://handcricketgameheadstails.netlify.app/',
+      technologies: ['Flutter', 'Firebase', 'SharedPreference'],
+    ),
+    Project(
+      title: 'DevTrack Developer-Productivity-Tracker ',
+      description: 'DevTrack is a modern productivity tracker built specifically for developers. Whether you are a freelancer, student, or full-time engineer.',
+      imageUrl: 'assets/images/jahez.png',
+      githubUrl: 'https://github.com/Maazleo/DevTrack-Developer-Productivity-Tracker',
+      liveUrl: 'https://devtrackapp.netlify.app/',
+      technologies: ['Flutter', 'Firebase', 'GetX'],
+    ),
+    Project(
       title: 'Qr Code Scanner Generator',
       description: 'A Flutter app for scanning and generating QR codes.',
       imageUrl: 'assets/images/jahez.png',
       githubUrl: 'https://github.com/Maazleo/qr-code-scanner-app',
+      liveUrl: 'http://qrscanandgenerator.netlify.app',
       technologies: ['Flutter', 'SQLite', 'Charts'],
     ),
     Project(

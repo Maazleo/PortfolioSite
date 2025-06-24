@@ -113,7 +113,7 @@ class Footer extends StatelessWidget {
         ),
         const SizedBox(height: 16),
         Text(
-          'Flutter developer specializing in creating beautiful and functional mobile applications.',
+          'Flutter developer and React.Js developer with hands-on skills in JavaScript, HTML, CSS and Python specializing in creating beautiful and functional mobile applications.',
           style: AppTextStyles.bodyStyle,
         ),
         const SizedBox(height: 16),

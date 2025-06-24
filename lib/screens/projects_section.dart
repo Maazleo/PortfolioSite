@@ -19,6 +19,13 @@ class ProjectsSection extends StatelessWidget {
       throw 'Could not launch $githubUrl';
     }
   }
+
+  void _launchURL(String url) async {
+    final Uri uri = Uri.parse(url);
+    if (!await launchUrl(uri)) {
+      throw Exception('Could not launch $url');
+    }
+  }
   
   @override
   Widget build(BuildContext context) {
@@ -167,22 +174,21 @@ class ProjectsSection extends StatelessWidget {
               ),
               Row(
                 children: [
-                  IconButton(
-                    icon: const Icon(
-                      Icons.language,
-                      color: AppColors.textSecondary,
+                  if (project.liveUrl != null)
+                    AnimatedButton(
+                      text: 'Live Demo',
+                      onPressed: () => _launchURL(project.liveUrl!),
+                      icon: Icons.language,
+                      isSmall: true,
+                      isOutlined: true,
                     ),
-                    onPressed: () {},
-                    tooltip: 'Live Demo',
-                    constraints: const BoxConstraints(),
-                    padding: const EdgeInsets.all(8),
-                  ),
+                  const SizedBox(width: 8),
                   IconButton(
                     icon: const Icon(
                       Icons.code,
                       color: AppColors.textSecondary,
                     ),
-                    onPressed: () {},
+                    onPressed: () => _launchURL(project.githubUrl),
                     tooltip: 'Source Code',
                     constraints: const BoxConstraints(),
                     padding: const EdgeInsets.all(8),
