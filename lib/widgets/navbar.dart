@@ -25,7 +25,7 @@ class _NavBarState extends State<NavBar> {
   bool _isMenuOpen = false;
   
   Future<void> _downloadCV() async {
-    const String cvUrl = 'https://drive.google.com/file/d/1Pec3E7zaxPcmWnAwLKmV7-m70jWlhdUM/view?usp=drive_link';
+    const String cvUrl = 'https://drive.google.com/file/d/1Qji5oICSDQQCflESRbn-bsfIlbMhL0y2/view?usp=drive_link';
     
     if (await canLaunchUrl(Uri.parse(cvUrl))) {
       await launchUrl(Uri.parse(cvUrl), mode: LaunchMode.externalApplication);
