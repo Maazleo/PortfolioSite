@@ -29,6 +29,12 @@ class ProjectsSection extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
+    final List<Project> flutterProjects = Project.sampleProjects.where((p) => p.category == 'Flutter').toList();
+    final List<Project> webProjects = Project.sampleProjects.where((p) => p.category == 'Web').toList();
+    final List<Project> featuredFlutter = flutterProjects.take(2).toList();
+    final List<Project> otherFlutter = flutterProjects.skip(2).toList();
+    final List<Project> featuredWeb = webProjects.isNotEmpty ? [webProjects.first] : <Project>[];
+    final List<Project> otherWeb = webProjects.length > 1 ? webProjects.sublist(1) : <Project>[];
     return Container(
       width: double.infinity,
       padding: Responsive.responsivePadding(context: context),
@@ -39,9 +45,29 @@ class ProjectsSection extends StatelessWidget {
             title: SectionTitles.projects,
             subtitle: 'Some of my recent work',
           ),
-          _buildFeaturedProjects(context),
-          const SizedBox(height: 60),
-          _buildOtherProjects(context),
+          // Flutter Apps Section
+          Text('Flutter Apps', style: AppTextStyles.titleStyle),
+          const SizedBox(height: 24),
+          ...featuredFlutter.map<Widget>((project) => Padding(
+            padding: const EdgeInsets.only(bottom: 40),
+            child: ProjectCard(project: project, isMobile: false),
+          )).toList(),
+          if (otherFlutter.isNotEmpty) ...[
+            const SizedBox(height: 24),
+            _buildProjectGrid(otherFlutter),
+          ],
+          const SizedBox(height: 40),
+          // Web Apps Section
+          Text('React.js & Web Apps', style: AppTextStyles.titleStyle),
+          const SizedBox(height: 24),
+          ...featuredWeb.map<Widget>((project) => Padding(
+            padding: const EdgeInsets.only(bottom: 40),
+            child: ProjectCard(project: project, isMobile: false),
+          )).toList(),
+          if (otherWeb.isNotEmpty) ...[
+            const SizedBox(height: 24),
+            _buildProjectGrid(otherWeb),
+          ],
           const SizedBox(height: 40),
           Center(
             child: AnimatedButton(
@@ -54,97 +80,21 @@ class ProjectsSection extends StatelessWidget {
       ),
     );
   }
-  
-  Widget _buildFeaturedProjects(BuildContext context) {
-    final featuredProjects = Project.sampleProjects.where((project) => project.featured).toList();
-    final isMobile = Responsive.isMobile(context);
-    
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          'Featured Projects',
-          style: AppTextStyles.titleStyle,
-        ),
-        const SizedBox(height: 32),
-        ...List.generate(featuredProjects.length, (index) {
-          return ProjectCard(
-            project: featuredProjects[index],
-            isReversed: index % 2 == 1,
-            isMobile: isMobile,
-          );
-        }),
-      ],
-    );
-  }
-  
-  Widget _buildOtherProjects(BuildContext context) {
-    final otherProjects = Project.sampleProjects.where((project) => !project.featured).toList();
-    final isMobile = Responsive.isMobile(context);
-    final isTablet = Responsive.isTablet(context);
-    
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          'Other Noteworthy Projects',
-          style: AppTextStyles.titleStyle,
-        ),
-        const SizedBox(height: 32),
-        if (isMobile)
-          _buildMobileProjectGrid(otherProjects)
-        else if (isTablet)
-          _buildTabletProjectGrid(otherProjects)
-        else
-          _buildDesktopProjectGrid(otherProjects),
-      ],
-    );
-  }
-  
-  Widget _buildDesktopProjectGrid(List<Project> projects) {
+
+  Widget _buildProjectGrid(List<Project> projects) {
+    final isMobile = false; // You can add responsive logic if needed
     return GridView.builder(
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 3,
         crossAxisSpacing: 24,
         mainAxisSpacing: 24,
-        childAspectRatio: 0.8, // Adjusted for better proportions
+        childAspectRatio: 0.8,
       ),
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
       itemCount: projects.length,
       itemBuilder: (context, index) {
         return _buildProjectGridItem(projects[index]);
-      },
-    );
-  }
-  
-  Widget _buildTabletProjectGrid(List<Project> projects) {
-    return GridView.builder(
-      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 2,
-        crossAxisSpacing: 20,
-        mainAxisSpacing: 20,
-        childAspectRatio: 0.85, // Adjusted for better proportions
-      ),
-      shrinkWrap: true,
-      physics: const NeverScrollableScrollPhysics(),
-      itemCount: projects.length,
-      itemBuilder: (context, index) {
-        return _buildProjectGridItem(projects[index]);
-      },
-    );
-  }
-  
-  Widget _buildMobileProjectGrid(List<Project> projects) {
-    return ListView.builder(
-      shrinkWrap: true,
-      physics: const NeverScrollableScrollPhysics(),
-      itemCount: projects.length,
-      itemBuilder: (context, index) {
-        return Padding(
-          padding: const EdgeInsets.only(bottom: 24),
-          child: _buildProjectGridItem(projects[index]),
-        );
       },
     );
   }

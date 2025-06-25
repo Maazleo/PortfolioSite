@@ -6,6 +6,7 @@ class Project {
   final String? liveUrl;
   final List<String> technologies;
   final bool featured;
+  final String category;
 
   Project({
     required this.title,
@@ -15,10 +16,12 @@ class Project {
     this.liveUrl,
     required this.technologies,
     this.featured = false,
+    required this.category,
   });
 
   // Sample projects data
   static List<Project> sampleProjects = [
+    // FLUTTER PROJECTS
     Project(
       title: 'Flutter CineBook App',
       description: 'CineBOOK is a sleek and intuitive mobile application designed with Flutter, catering to movie buffs and TV show enthusiasts. With cineBOOK, discovering, organizing, and managing your favorite films and shows has never been easier.',
@@ -27,14 +30,16 @@ class Project {
       liveUrl: 'https://cinebookapp.netlify.app',
       technologies: ['Flutter', 'Firebase', 'Apis', 'Provider'],
       featured: true,
+      category: 'Flutter',
     ),
     Project(
       title: 'Digital Academic Portal - Management App',
       description: 'A productivity app for managing tasks with reminders, categories, and progress tracking.',
-      imageUrl: 'assets/icons/gap.png',
+      imageUrl: 'assets/images/DapPortal.png',
       githubUrl: 'https://github.com/HafizHuzaifa76/DigitalAcademicPortal-FYP',
       technologies: ['Flutter', 'Hive', 'BLoC'],
       featured: true,
+      category: 'Flutter',
     ),
     Project(
       title: 'YourJahez App - Anti Jahez Awareness App ',
@@ -43,6 +48,7 @@ class Project {
       githubUrl: 'https://github.com/Maazleo/Your_Jahez_App',
       liveUrl: 'https://github.com/Maazleo/Your_Jahez_App',
       technologies: ['Flutter', 'Firebase', 'GetX'],
+      category: 'Flutter',
     ),
     Project(
       title: 'Hand Cricket Flutter Game - HeadTails ',
@@ -51,6 +57,7 @@ class Project {
       githubUrl: 'https://github.com/Maazleo/HandCricket-FlutterGame',
       liveUrl: 'https://handcricketgameheadstails.netlify.app/',
       technologies: ['Flutter', 'Firebase', 'SharedPreference'],
+      category: 'Flutter',
     ),
     Project(
       title: 'DevTrack Developer-Productivity-Tracker ',
@@ -59,6 +66,7 @@ class Project {
       githubUrl: 'https://github.com/Maazleo/DevTrack-Developer-Productivity-Tracker',
       liveUrl: 'https://devtrackapp.netlify.app/',
       technologies: ['Flutter', 'Firebase', 'GetX'],
+      category: 'Flutter',
     ),
     Project(
       title: 'Qr Code Scanner Generator',
@@ -67,6 +75,7 @@ class Project {
       githubUrl: 'https://github.com/Maazleo/qr-code-scanner-app',
       liveUrl: 'http://qrscanandgenerator.netlify.app',
       technologies: ['Flutter', 'SQLite', 'Charts'],
+      category: 'Flutter',
     ),
     Project(
       title: 'PakiFlix-Netflix Clone App',
@@ -74,7 +83,17 @@ class Project {
       imageUrl: 'assets/images/projects/social_app.png',
       githubUrl: 'https://github.com/yourusername/social-app',
       technologies: ['Flutter', 'Firebase', 'Cloud Functions'],
+      category: 'Flutter',
     ),
-
+    // WEB/REACT PROJECTS
+    Project(
+      title: '🕌 Namaz Activity Tracker - React.js WebAPP',
+      description: 'A modern, feature-rich React web app to help you track your daily prayers, view progress, get smart suggestions, and stay motivated on your spiritual journey. ��✨.',
+      imageUrl: 'assets/images/Namaz.png',
+      githubUrl: 'https://github.com/Maazleo/Namaz-Activity-Tracker-React.js-WebAPP.git',
+      liveUrl: 'https://trackyournamaz.netlify.app/',
+      technologies: ['React.js', 'JavaScript', 'ReCharts','JsPDF','react-leaflet','Axios OpenStreetMap APIs'],
+      category: 'Web',
+    ),
   ];
 } 
