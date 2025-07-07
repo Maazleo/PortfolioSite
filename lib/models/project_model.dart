@@ -88,11 +88,20 @@ class Project {
     // WEB/REACT PROJECTS
     Project(
       title: '🕌 Namaz Activity Tracker - React.js WebAPP',
-      description: 'A modern, feature-rich React web app to help you track your daily prayers, view progress, get smart suggestions, and stay motivated on your spiritual journey. ��✨.',
-      imageUrl: 'assets/images/Namaz.png',
+      description: 'A modern, feature-rich React web app to help you track your daily prayers, view progress, get smart suggestions, and stay motivated on your spiritual journey. 🌙✨.',
+      imageUrl: 'assets/images/jahez.png',
       githubUrl: 'https://github.com/Maazleo/Namaz-Activity-Tracker-React.js-WebAPP.git',
       liveUrl: 'https://trackyournamaz.netlify.app/',
       technologies: ['React.js', 'JavaScript', 'ReCharts','JsPDF','react-leaflet','Axios OpenStreetMap APIs'],
+      category: 'Web',
+    ),
+    Project(
+      title: 'get_resume.io - Resume Builder ReactJs App',
+      description: 'get_resume.io is a beautiful, modern, and intuitive resume builder web app. Instantly create, preview, and download professional resumes with ease. All your data is saved locally and can be exported as PDF or PNG. Share your resume with a public link and impress recruiters with a stunning, ATS-friendly design.',
+      imageUrl: 'assets/images/your_react_portfolio.png', // Add your image to assets/images/
+      githubUrl: 'https://github.com/Maazleo/GetResume.io.git',
+      liveUrl: 'https://getresumeio.netlify.app/',
+      technologies: ['React.js', 'JavaScript', 'CSS', 'Netlify'],
       category: 'Web',
     ),
   ];
