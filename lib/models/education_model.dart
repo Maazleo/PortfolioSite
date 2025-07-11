@@ -52,81 +52,126 @@ class Skill {
 
   // Sample skills data
   static List<Skill> sampleSkills = [
-    // Programming Languages
+    // LANGUAGES
     Skill(
-      name: 'Dart',
+      name: 'JavaScript',
       proficiency: 0.95,
-      category: 'Programming Languages',
+      category: 'Languages',
       iconPath: 'assets/icons/dart.svg',
-    ),
-    Skill(
-      name: 'JavaScript, HTML, CSS',
-      proficiency: 0.85,
-      category: 'Programming Languages',
-      iconPath: 'assets/icons/javascript.svg',
     ),
     Skill(
       name: 'Python',
+      proficiency: 0.85,
+      category: 'Languages',
+      iconPath: 'assets/icons/javascript.svg',
+    ),
+    Skill(
+      name: 'HTML & CSS',
+      proficiency: 0.90,
+      category: 'Languages',
+      iconPath: 'assets/icons/html.svg',
+    ),
+    Skill(
+      name: 'Dart',
       proficiency: 0.80,
-      category: 'Programming Languages',
+      category: 'Languages',
       iconPath: 'assets/icons/python.svg',
     ),
     Skill(
-      name: 'C/C#/C++',
-      proficiency: 0.95,
-      category: 'Programming Languages',
-      iconPath: 'assets/icons/dart.svg',
-    ),
-    Skill(
       name: 'Java',
-      proficiency: 0.95,
-      category: 'Programming Languages',
-      iconPath: 'assets/icons/dart.svg',
+      proficiency: 0.75,
+      category: 'Languages',
+      iconPath: 'assets/icons/java.svg',
     ),
     Skill(
-      name: 'Sql',
-      proficiency: 0.95,
-      category: 'Programming Languages',
-      iconPath: 'assets/icons/dart.svg',
+      name: 'C/C++/C#',
+      proficiency: 0.70,
+      category: 'Languages',
+      iconPath: 'assets/icons/cpp.svg',
+    ),
+    Skill(
+      name: 'SQL',
+      proficiency: 0.85,
+      category: 'Languages',
+      iconPath: 'assets/icons/sql.svg',
     ),
 
-    
-    // Frameworks
+    // FRONTEND FRAMEWORKS
     Skill(
       name: 'Flutter',
       proficiency: 0.95,
-      category: 'Frameworks',
+      category: 'Frontend Frameworks',
       iconPath: 'assets/icons/flutter.svg',
     ),
     Skill(
       name: 'React.js',
-      proficiency: 0.65,
-      category: 'Frameworks',
+      proficiency: 0.85,
+      category: 'Frontend Frameworks',
       iconPath: 'assets/icons/react.svg',
     ),
     Skill(
-      name: 'React Native',
+      name: 'Next.js',
       proficiency: 0.75,
-      category: 'Frameworks',
-      iconPath: 'assets/icons/react.svg',
+      category: 'Frontend Frameworks',
+      iconPath: 'assets/icons/nextjs.svg',
+    ),
+
+    // BACKEND FRAMEWORKS
+    Skill(
+      name: 'Express.js',
+      proficiency: 0.65,
+      category: 'Backend Frameworks',
+      iconPath: 'assets/icons/express.svg',
+    ),
+    Skill(
+      name: 'Node.js',
+      proficiency: 0.60,
+      category: 'Backend Frameworks',
+      iconPath: 'assets/icons/nodejs.svg',
+    ),
+    Skill(
+      name: 'Flask',
+      proficiency: 0.50,
+      category: 'Backend Frameworks',
+      iconPath: 'assets/icons/firebase.svg',
+    ),
+    Skill(
+      name: 'Django',
+      proficiency: 0.60,
+      category: 'Backend Frameworks',
+      iconPath: 'assets/icons/firebase.svg',
+    ),
+
+    // DATABASE
+    Skill(
+      name: 'MongoDB',
+      proficiency: 0.85,
+      category: 'Database',
+      iconPath: 'assets/icons/mongodb.svg',
     ),
     Skill(
       name: 'Firebase',
-      proficiency: 0.90,
-      category: 'Frameworks',
-      iconPath: 'assets/icons/firebase.svg',
+      proficiency: 0.85,
+      category: 'Database',
+      iconPath: 'assets/icons/mongodb.svg',
     ),
     Skill(
-      name: 'MySql/Sqlite',
-      proficiency: 0.90,
-      category: 'Frameworks',
-      iconPath: 'assets/icons/firebase.svg',
+      name: 'MySQL',
+      proficiency: 0.80,
+      category: 'Database',
+      iconPath: 'assets/icons/mysql.svg',
     ),
-    
-    // Tools
+    Skill(
+      name: 'SQLite',
+      proficiency: 0.85,
+      category: 'Database',
+      iconPath: 'assets/icons/sqlite.svg',
+    ),
+
+    // TOOLS
     Skill(
       name: 'Git',
-      proficiency: 0.85,
+      proficiency: 0.90,
       category: 'Tools',
       iconPath: 'assets/icons/git.svg',
     ),
@@ -134,13 +179,7 @@ class Skill {
       name: 'GitHub',
       proficiency: 0.85,
       category: 'Tools',
-      iconPath: 'assets/icons/git.svg',
-    ),
-    Skill(
-      name: 'Cursor AI',
-      proficiency: 0.85,
-      category: 'Tools',
-      iconPath: 'assets/icons/git.svg',
+      iconPath: 'assets/icons/github.svg',
     ),
     Skill(
       name: 'VS Code',
@@ -152,27 +191,51 @@ class Skill {
       name: 'Android Studio',
       proficiency: 0.80,
       category: 'Tools',
+      iconPath: 'assets/icons/android-studio.svg',
+    ),
+    Skill(
+      name: 'Cursor AI',
+      proficiency: 0.85,
+      category: 'Tools',
+      iconPath: 'assets/icons/cursor.svg',
+    ),
+    Skill(
+      name: 'Provider-GetX-Bloc',
+      proficiency: 0.75,
+      category: 'Tools',
       iconPath: 'assets/icons/figma.svg',
     ),
-    
-    // Other
+
+    // OTHERS
     Skill(
       name: 'UI/UX Design',
       proficiency: 0.85,
-      category: 'Other',
+      category: 'Others',
       iconPath: 'assets/icons/design.svg',
     ),
     Skill(
       name: 'RESTful APIs',
-      proficiency: 0.90,
-      category: 'Other',
+      proficiency: 0.60,
+      category: 'Others',
       iconPath: 'assets/icons/api.svg',
     ),
     Skill(
       name: 'State Management',
       proficiency: 0.90,
-      category: 'Other',
+      category: 'Others',
       iconPath: 'assets/icons/state.svg',
+    ),
+    Skill(
+      name: 'Responsive Design',
+      proficiency: 0.85,
+      category: 'Others',
+      iconPath: 'assets/icons/responsive.svg',
+    ),
+    Skill(
+      name: 'Agile/Scrum',
+      proficiency: 0.80,
+      category: 'Others',
+      iconPath: 'assets/icons/agile.svg',
     ),
   ];
   
